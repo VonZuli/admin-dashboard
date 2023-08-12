@@ -10,14 +10,10 @@ body {
 /* adjust grid-templates to fix layout in all sections */
 .container {
   display: grid;
-  grid-template: 1fr 8fr / 1fr 3fr;
+  grid-template: 1fr 14fr / 1fr 3fr;
   gap: 5px;
 }
-.side-bar {
-  border: 2px solid red;
-  grid-area: 1/1/3/2;
-  max-width: fit-content;
-}
+
 .header {
   border: 2px solid green;
   grid-area: 1/2/2/-1;
@@ -72,15 +68,15 @@ body {
   grid-area: 1/1/3/2;
 }
 
-.user-actions{
+.user-actions {
   text-align: right;
 }
-.user-actions > button{
+.user-actions > button {
   border-radius: 20px;
   width: 75px;
   background-color: pink;
   border: none;
-  box-shadow:5px 2px 2px grey;
+  box-shadow: 5px 2px 2px grey;
   margin: 3%;
   padding: 8px 5px;
   font-weight: bold;
@@ -110,12 +106,153 @@ body {
 .user-profile > object {
   max-width: 32px;
 }
+.side-bar {
+  border: 2px solid red;
+  grid-area: 1/1/3/2;
+  /* max-width: fit-content; */
+  display: grid;
+  grid-template: repeat(10, 1fr) / 1fr 2fr;
+  max-height: 1vh;
+}
+.side-bar > h1 {
+  max-height: 100px;
+}
 .side-bar > object {
   max-width: 64px;
 }
-.nav > ul {
+
+.side-bar > ul {
   list-style: none;
+  display: grid;
+  grid-template: repeat(9, 1fr)/1fr 1fr;
+  grid-column: span 2;
 }
-.nav > ul > object {
+.side-bar > ul > div > object {
   max-width: 32px;
+  grid-area: 2/1/-1/2;
+}
+.side-bar > ul > div > li {
+  font-weight: bold;
+}
+/* body > div > div.side-bar > ul > div.list-object.home{
+grid-area: 1/1/2/3;
+}
+body > div > div.side-bar > ul > div.list-object.profile{
+grid-area: 2/1/3/3;
+}
+body > div > div.side-bar > ul > div.list-object.messages{
+grid-area: 3/1/4/3;
+} */
+
+.list-object {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+.list-object.home{
+  grid-area: 1/1/2/3;
+  
+}
+
+.list-object.profile{
+  grid-area: 2/1/3/3;
+
+}
+
+.list-object.message{
+  grid-area: 3/1/4/3;
+}
+
+.list-object.history{
+  grid-area: 4/1/5/3;
+}
+
+.list-object.tasks{
+  grid-area: 5/1/6/3;
+}
+
+.list-object.communities{
+  grid-area: 6/1/7/3;
+}
+
+.list-object.settings{
+  grid-area: 7/1/8/3;
+}
+
+.list-object.support{
+  grid-area: 8/1/9/3;
+}
+
+.list-object.privacy{
+  grid-area: 9/1/10/3;
+}
+
+.list-object.home > object {
+  grid-area: 1/1/2/2;
+}
+
+.list-object.profile > object {
+  grid-area: 1/1/2/2;
+}
+
+.list-object.message > object {
+  grid-area: 1/1/2/2;
+}
+
+.list-object.history > object {
+  grid-area: 1/1/2/2;
+}
+
+.list-object.tasks > object {
+  grid-area: 1/1/2/2;
+}
+
+.list-object.communities > object {
+  grid-area: 1/1/2/2;
+}
+
+.list-object.settings > object {
+  grid-area: 1/1/2/2;
+}
+
+.list-object.support > object {
+  grid-area: 1/1/2/2;
+}
+
+.list-objec.privacy > object {
+  grid-area: 1/1/2/2;
+}
+
+div.list-object.home > li {
+  grid-area: 1/2/2/3;
+}
+.list-object.profile > li {
+  grid-area: 1/2/2/3;
+}
+
+.list-object.message > li {
+  grid-area: 1/2/2/3;
+}
+
+.list-object.history > li {
+  grid-area: 1/2/2/3;
+}
+
+.list-object.tasks > li {
+  grid-area: 1/2/2/3;
+}
+
+.list-object.communities > li {
+  grid-area: 1/2/2/3;
+}
+
+.list-object.settings > li {
+  grid-area: 1/2/2/3;
+}
+
+.list-object.support > li {
+  grid-area: 1/2/2/3;
+}
+
+.list-object.privacy > li {
+  grid-area: 2/2/2/3;
 }
