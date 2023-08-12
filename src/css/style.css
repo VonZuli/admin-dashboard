@@ -1,0 +1,42 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(147, 147, 219);
+}
+
+.container{
+  display: grid;
+  grid-template: 2fr / 2fr;
+}
+.side-bar{
+  border: 2px solid red;
+  grid-area: 1/1/-1/3;
+  width: fit-content;
+}
+.header{
+  border: 2px solid green;
+  grid-area: 1/2/2/-1;
+  /* width: fit-content; */
+}
+.search > object {
+  max-width: 32px;
+}
+.user-interaction > object {
+  max-width: 32px;
+}
+
+.user-profile > object {
+  max-width: 32px;
+}
+.side-bar > object{
+  max-width: 64px;
+}
+.nav > ul {
+  list-style: none;
+}
+.nav > ul > object {
+  max-width: 32px;
+}
